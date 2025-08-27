@@ -1,36 +1,176 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-<meta charset="UTF-8">
-<title>Streaming Sicilia</title>
+  <meta charset="UTF-8">
+  <title>Streaming Sicilia</title>
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+    header {
+      text-align: center;
+      padding: 20px;
+      background: #111;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      letter-spacing: 1px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      padding: 30px;
+    }
+    .card {
+      background: #222;
+      border-radius: 12px;
+      padding: 15px;
+      text-align: center;
+      text-decoration: none;
+      color: #fff;
+      transition: transform 0.2s, background 0.2s;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .card:hover {
+      transform: scale(1.05);
+      background: #333;
+    }
+    .card img {
+      width: 100%;
+      max-width: 140px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+    .card h2 {
+      margin: 0;
+      font-size: 1rem;
+    }
+  </style>
 </head>
-<body style="background:#000; color:#fff; text-align:center;">
-<h1>Benvenuto su Streaming Sicilia</h1>
-<ul>
-  <li><a href="telecolor.html">Telecolor Live</a></li>
-  <li><a href="antennasicilia.html">Antenna Sicilia Live</a></li>
-  <li><a href="DAZN1.html">DAZN1</a></li> 
-  <li><a href="DAZNITALIA.html">DAZN 1 ITALIA</a></li> 
-  <li><a href="skysportcalcio.html">skysportcalcio</a></li>
-  <li><a href="skysportcalcioV2.html">skysportcalcioV2</a></li>
-  <li><a href="skysportuno.html">skysportuno</a></li>
-  <li><a href="V2skysportuno.html">V2skysportuno</a></li> 
-  <li><a href="skysportf1.html">skysportf1</a></li>
-  <li><a href="SkysportF1new.html">SkysportF1new</a></li>
-  <li><a href="skysport251.html">skysport251</a></li>
-  <li><a href="dazn1V2.html">dazn1V2</a></li> 
-  <li><a href="dazn2.html">dazn2</a></li> 
-  <li><a href="cbsgolazo.html">cbsgolazo</a></li>
-  <li><a href="dazn1UK.html">dazn1UK</a></li>
-  <li><a href="skysport24.html">skysport24</a></li>
-  <li><a href="V2skysport24.html">V2skysport24</a></li>
-  <li><a href="DAZN1TEST.html">DAZN1TEST</a></li> 
-  <li><a href="1skysport251.html">skysport251</a></li>
-  <li><a href="skysport252.html">skysport252</a></li>
-  <li><a href="skysport253.html">skysport253</a></li>
-  <li><a href="skysport254.html">skysport254</a></li>
-  <li><a href="skysport255.html">skysport255</a></li>
-  <li><a href="skysport256.html">skysport256</a></li>
-</ul>
+<body>
+  <header>
+    <h1>📺 Benvenuto su Streaming Live TV</h1>
+  </header>
+
+  <div class="grid">
+    <!-- Telecolor -->
+    <a href="telecolor.html" class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/it/3/33/Telecolor.png" alt="Telecolor">
+      <h2>Telecolor Live</h2>
+    </a>
+
+    <!-- Antenna Sicilia -->
+    <a href="antennasicilia.html" class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/it/f/f1/Antenna_Sicilia_logo.png" alt="Antenna Sicilia">
+      <h2>Antenna Sicilia Live</h2>
+    </a>
+
+    <!-- DAZN -->
+    <a href="DAZN1.html" class="card">
+      <img src="https://seeklogo.com/images/D/dazn-logo-8F4F114152-seeklogo.com.png" alt="DAZN1">
+      <h2>DAZN1</h2>
+    </a>
+    <a href="DAZNITALIA.html" class="card">
+      <img src="https://seeklogo.com/images/D/dazn-logo-8F4F114152-seeklogo.com.png" alt="DAZN Italia">
+      <h2>DAZN 1 Italia</h2>
+    </a>
+    <a href="dazn1V2.html" class="card">
+      <img src="https://seeklogo.com/images/D/dazn-logo-8F4F114152-seeklogo.com.png" alt="DAZN1 V2">
+      <h2>DAZN1 V2</h2>
+    </a>
+    <a href="dazn2.html" class="card">
+      <img src="https://seeklogo.com/images/D/dazn-logo-8F4F114152-seeklogo.com.png" alt="DAZN2">
+      <h2>DAZN2</h2>
+    </a>
+    <a href="dazn1UK.html" class="card">
+      <img src="https://seeklogo.com/images/D/dazn-logo-8F4F114152-seeklogo.com.png" alt="DAZN UK">
+      <h2>DAZN1 UK</h2>
+    </a>
+    <a href="DAZN1TEST.html" class="card">
+      <img src="https://seeklogo.com/images/D/dazn-logo-8F4F114152-seeklogo.com.png" alt="DAZN Test">
+      <h2>DAZN1 Test</h2>
+    </a>
+    <a href="zonadazn.html" class="card">
+      <img src="https://seeklogo.com/images/D/dazn-logo-8F4F114152-seeklogo.com.png" alt="Zona DAZN">
+      <h2>Zona DAZN</h2>
+    </a>
+
+    <!-- Sky Sport -->
+    <a href="skysportcalcio.html" class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Sky_Sport_logo_2017.svg" alt="Sky Sport Calcio">
+      <h2>Sky Sport Calcio</h2>
+    </a>
+    <a href="skysportcalcioV2.html" class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Sky_Sport_logo_2017.svg" alt="Sky Sport Calcio V2">
+      <h2>Sky Sport Calcio V2</h2>
+    </a>
+    <a href="skysportuno.html" class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Sky_Sport_logo_2017.svg" alt="Sky Sport Uno">
+      <h2>Sky Sport Uno</h2>
+    </a>
+    <a href="V2skysportuno.html" class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Sky_Sport_logo_2017.svg" alt="Sky Sport Uno V2">
+      <h2>Sky Sport Uno V2</h2>
+    </a>
+    <a href="skysportf1.html" class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Sky_Sport_logo_2017.svg" alt="Sky Sport F1">
+      <h2>Sky Sport F1</h2>
+    </a>
+    <a href="SkysportF1new.html" class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Sky_Sport_logo_2017.svg" alt="Sky Sport F1 New">
+      <h2>Sky Sport F1 New</h2>
+    </a>
+    <a href="skysportuno.html" class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Sky_Sport_logo_2017.svg" alt="Sky Sport 251">
+      <h2>Sky Sport 251</h2>
+    </a>
+    <a href="1skysport251.html" class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Sky_Sport_logo_2017.svg" alt="Sky Sport 251 (Alt)">
+      <h2>Sky Sport 251 (Alt)</h2>
+    </a>
+    <a href="skysport252.html" class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Sky_Sport_logo_2017.svg" alt="Sky Sport 252">
+      <h2>Sky Sport 252</h2>
+    </a>
+    <a href="skysport253.html" class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Sky_Sport_logo_2017.svg" alt="Sky Sport 253">
+      <h2>Sky Sport 253</h2>
+    </a>
+    <a href="skysport254.html" class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Sky_Sport_logo_2017.svg" alt="Sky Sport 254">
+      <h2>Sky Sport 254</h2>
+    </a>
+    <a href="skysport255.html" class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Sky_Sport_logo_2017.svg" alt="Sky Sport 255">
+      <h2>Sky Sport 255</h2>
+    </a>
+    <a href="skysport256.html" class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Sky_Sport_logo_2017.svg" alt="Sky Sport 256">
+      <h2>Sky Sport 256</h2>
+    </a>
+
+    <!-- Altri -->
+    <a href="cbsgolazo.html" class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/02/CBS_Sports_Logo_2021.svg" alt="CBS Golazo">
+      <h2>CBS Golazo</h2>
+    </a>
+    <a href="skysport24.html" class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Sky_Sport_logo_2017.svg" alt="Sky Sport 24">
+      <h2>Sky Sport 24</h2>
+    </a>
+    <a href="V2skysport24.html" class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Sky_Sport_logo_2017.svg" alt="Sky Sport 24 V2">
+      <h2>Sky Sport 24 V2</h2>
+    </a>
+  </div>
 </body>
 </html>

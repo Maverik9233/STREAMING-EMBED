@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <title>Streaming Live Web</title>
+  <title>Streaming Live PayTv</title>
   <style>
     body {
       margin: 0;
@@ -21,6 +21,23 @@
       font-size: 2rem;
       letter-spacing: 1px;
     }
+    /* Barra filtri */
+    .filters {
+      margin-top: 15px;
+    }
+    .filters input, .filters select {
+      padding: 8px 10px;
+      border-radius: 6px;
+      border: none;
+      margin: 0 5px;
+      font-size: 0.9rem;
+      background: #222;
+      color: #fff;
+    }
+    .filters input::placeholder {
+      color: #aaa;
+    }
+
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -34,7 +51,7 @@
       text-align: center;
       text-decoration: none;
       color: #fff;
-      transition: transform 0.2s, background 0.2s;
+      transition: transform 0.2s, background 0.2s, box-shadow 0.3s;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -43,6 +60,7 @@
     .card:hover {
       transform: scale(1.05);
       background: #333;
+      box-shadow: 0 0 10px rgba(255,255,255,0.2);
     }
     .card img {
       width: 100%;
@@ -54,14 +72,50 @@
       margin: 0;
       font-size: 1rem;
     }
+    /* Messaggio "nessun risultato" */
+    #noResults {
+      text-align: center;
+      color: #aaa;
+      margin-top: 20px;
+      font-style: italic;
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>📺 Benvenuto su Streaming Live TV</h1>
+    <h1>📺 Streaming Live PayTv</h1>
+    <div class="filters">
+      <input type="text" id="search" placeholder="Cerca per nome...">
+      <select id="countryFilter">
+        <option value="all">Tutte le nazioni</option>
+        <option value="italia">Italia</option>
+        <option value="francia">Francia</option>
+        <option value="spagna">Spagna</option>
+        <option value="uk">UK</option>
+        <option value="germania">Germania</option>
+        <option value="svizzera">Svizzera</option>
+        <option value="argentina">Argentina</option>
+        <option value="brasile">Brasile</option>
+        <option value="usa">USA</option>
+        <option value="portogallo">Portogallo</option>
+        <option value="romania">Romania</option>
+        <option value="olanda">Olanda</option>
+        <option value="other">Other</option>
+      </select>
+      <select id="genreFilter">
+        <option value="all">Tutti i generi</option>
+        <option value="sport">Sport</option>
+        <option value="intrattenimento">Intrattenimento</option>
+        <option value="cinema">Cinema</option>
+        <option value="cartoons">Cartoons</option>
+        <option value="news">News</option>
+        <option value="musica">Musica</option>
+        <option value="indefinito">Indefinito</option>
+      </select>
+    </div>
   </header>
 
-  <div class="grid">
+  <div class="grid" id="channelGrid">
     <!-- Telecolor -->
     <a href="telecolor.html" class="card">
       <img src="logos/telecolor.png" alt="Telecolor">
